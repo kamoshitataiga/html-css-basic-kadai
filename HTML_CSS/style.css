@@ -1,32 +1,87 @@
-:root {
+h1,p,body {
+  margin:0px;
+}
+
+p,a {
   font-size: 20px;
 }
 
+header {
+  background-color: rgb(244,79,79);
+  text-align: center;
+}
+
 h1 {
-  font-size: 2rem;
-  letter-spacing: 1.2em;
-  text-shadow: 1px 2px 3px #808080;
-  border-bottom: 3px solid rgb(115, 115,114);
-}
-#basic {
-  font-weight: bold;
-}
-body {
-  font-family:"Arial", "Meiryo", sans-serif;
-}
-.color1 {
- color:rgb(255,192,203);
+  color: rgb(255,255,255);
 }
 
-.color2 {
-  color:skyblue;
+main {
+  padding: 10px;
 }
 
-#basic {
-  font-weight: bold;
+#parent{
+  display: flex;
+  justify-content: space-between;
 }
-.google-fonts {
-  /* ここにGoogle Fontsを指定します */
-  font-family: "Josefin Sans", sans-serif;
-  font-family: "Noto Sans JP", sans-serif;
+
+.content {
+  border: 3px solid rgb(238,204,204);
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-align: center;
+
+}
+
+h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236,122,122)
+}
+
+h2::before {
+  content: "●";
+  color: rgb(239,111,139);
+}
+  
+
+
+.content p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97,206,249)
+}
+
+.content img {
+  margin: 10px 0;
+  width: 70%;
+}
+
+footer {
+  background-color: rgb(244,79,79);
+  text-align: center;
+}
+
+fotter a {
+  color: rgb(255,255,255);
+
+}
+
+a:visited {
+  color: rgb(193,234,251)
+}
+
+footer a:hover {
+  color: rgb(245,178,168)
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+  #parent {
+    flex-direction: column;
+    align-items: center;
+  }
 }
